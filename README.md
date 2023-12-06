@@ -288,6 +288,7 @@ The following table lists the configurable parameters of the Puppetserver chart 
 | `puppetserver.masters.backup.image` | puppetserver restic backup CronJob image | `restic/restic`|
 | `puppetserver.masters.backup.tag` | puppetserver restic backup CronJob image tag | `0.13.1`|
 | `puppetserver.masters.backup.pullPolicy` | puppetserver restic backup CronJob image pullPolicy | `IfNotPresent`|
+| `puppetserver.masters.backup.caConfigMap` | puppetserver restic backup CronJob configmap for custom ca-certificates.crt | ``|
 | `puppetserver.masters.backup.restic.keep_last` | puppetserver restic backup CronJob keep last n days | `90`|
 | `puppetserver.masters.backup.restic.repository` | puppetserver restic backup CronJob s3 compatible repository | ``|
 | `puppetserver.masters.backup.restic.access_key_id` | puppetserver restic backup CronJob s3 access_key_id | ``|
@@ -570,6 +571,7 @@ kill %[job_numbers_above]
 * [Reinier Schoof](https://github.com/skoef), Maintainer
 * [Niels Højen](https://github.com/nielshojen), Maintainer
 * [Scott Cressi](https://www.linkedin.com/in/scottcressi/), Co-Author
+* [Linas Daneliukas](https://github.com/ldaneliukas), Maintainer
 * [Kai Sisterhenn](https://www.sistason.de/), Contributor
 * [chwehrli](https://github.com/chwehrli), Contributor
 * [Hryhorii Didenko](https://github.com/HryhoriiDidenko), Contributor
@@ -586,4 +588,3 @@ kill %[job_numbers_above]
 * [Ben Feld](https://github.com/rootshellz), Contributor
 * [Julien Godin](https://github.com/JGodin-C2C), Contributor
 * [Diego Abelenda](https://github.com/dabelenda), Contributor
-* [Linas Daneliukas](https://github.com/ldaneliukas), Contributor

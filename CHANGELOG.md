@@ -4,13 +4,27 @@ This file documents all notable changes to Puppet Server Helm Chart. The release
 numbering uses [semantic versioning](http://semver.org).
 
 NOTE: The change log until version `v0.2.4` is auto-generated.
-## [v8.1.6](https://github.com/puppetlabs/puppetserver-helm-chart/tree/v8.1.5) (2023-11-22)
-- Feat: Restic CA certs
+
+## [v8.3.0](https://github.com/puppetlabs/puppetserver-helm-chart/tree/v8.3.0) (2023-12-08)
+- breaking: Update values structure for 'metrics' to allow for multiple exporters
+- feat: Make serviceMonitor optional for all Prometheus exporters
+- feat: Add jmx exporter for puppetserver master/compilers
+
+## [v8.2.1](https://github.com/puppetlabs/puppetserver-helm-chart/tree/v8.2.0) (2023-11-29)
+- feat: GitHub Actions workflow: add lint, install and unittest for all PRs
+- feat: GitHub Actions workflow: simplify workflow_dispatch to aid releases from forks
+
+## [v8.2.0](https://github.com/puppetlabs/puppetserver-helm-chart/tree/v8.2.0) (2023-11-27)
+- Fix: Typo in compiler statefulset readiness probe scheme
+- Fix: `PUPPETDB_JAVA_ARGS` which includes `-Xlog:gc:` instead of the deprecated `-Xloggc` and uses an existing path
+- Fix: Broken r10k-code command for statefulset compilers & standardize r10k-code readiness probe usage
+- Feat: Environment variables loaded from secret key-value pairs
 
 ## [v8.1.5](https://github.com/puppetlabs/puppetserver-helm-chart/tree/v8.1.5) (2023-11-22)
-- Feat: Environment variables from secrets
+- Fix: Typo in the restic backup template preventing chart from being deployed
+- Feat: Add ability to mount custom ca-certificates.crt from configMap for Restic
 
-## [v8.1.4](https://github.com/puppetlabs/puppetserver-helm-chart/tree/v8.1.4) (2023-11-17)
+## [v8.1.4](https://github.com/puppetlabs/puppetserver-helm-chart/tree/v8.1.4) (2023-11-20)
 - Fix: Utilize `puppetserver` and `puppetdb` containers provided by voxpupuli and bump default versions
 
 ## [v8.1.3](https://github.com/puppetlabs/puppetserver-helm-chart/tree/v8.1.3) (2023-09-24)
