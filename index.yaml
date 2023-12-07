@@ -3,14 +3,14 @@ entries:
   puppetserver:
   - apiVersion: v2
     appVersion: 7.13.0
-    created: "2023-12-07T08:11:12.94961824Z"
+    created: "2023-12-07T08:21:50.329808995Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
       repository: https://charts.bitnami.com/bitnami
       version: 12.1.11
     description: Puppet automates the delivery and operation of software.
-    digest: d9b1d75958857a719899067b85bcdf6ae0b3d6050a94a4fcf304498c88ea6095
+    digest: 6b9b51ab9b58e52fa52c921495469cc3366da6e2c2c35aad85f7d308fc689bb1
     home: https://puppet.com/
     icon: https://secure.gravatar.com/avatar/fdd009b7c1ec96e088b389f773e87aec.jpg?s=80&r=g&d=mm
     keywords:
@@ -2854,4 +2854,4 @@ entries:
     urls:
     - https://puppetlabs.github.io/puppetserver-helm-chart/puppetserver-1.8.5.tgz
     version: 1.8.5
-generated: "2023-12-07T08:11:12.941631911Z"
+generated: "2023-12-07T08:21:50.322106136Z"
