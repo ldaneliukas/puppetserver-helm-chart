@@ -8,15 +8,12 @@ metadata:
 data:
   r10k_code.yaml: |
     # The location to use for storing cached Git repos
-    :cachedir: '/etc/puppetlabs/code/r10k_cache'
+    cachedir: '/etc/puppetlabs/code/r10k_cache'
     # A list of git repositories to create
-    {{- if .Values.r10k.code.extraSettings }}
-    {{- toYaml .Values.r10k.code.extraSettings | nindent 4 }}
-    {{- end }}
-    :sources:
+    sources:
       # This will clone the git repository and instantiate an environment per
       # branch in '/etc/puppetlabs/code/environments'
-      :puppet_repo:
+      puppet_repo:
         remote: '{{ .Values.puppetserver.puppeturl }}'
         basedir: '{{ .Values.puppetserver.puppetbasedir }}'
         {{- if .Values.r10k.code.defaultRepoExtraConf }}
@@ -24,6 +21,9 @@ data:
         {{- end }}
     {{- if .Values.r10k.code.extraRepos }}
     {{- toYaml .Values.r10k.code.extraRepos | nindent 6 }}
+    {{- end }}
+    {{- if .Values.r10k.code.extraSettings }}
+    {{- toYaml .Values.r10k.code.extraSettings | nindent 4 }}
     {{- end }}
 
   r10k_code_cronjob.sh: |
